@@ -15,9 +15,9 @@ document.getElementById('login-form').addEventListener('submit', async function(
     const data = await response.json();
     
     if (response.ok) {
-        // Store the token in localStorage and redirect to restricted page
+        
         localStorage.setItem('token', data.token);
-        window.location.href = 'restricted.html';  // Redirect to a restricted area
+        window.location.href = 'restricted.html';  
     } else {
         document.getElementById('error-message').textContent = data.message || 'Login failed';
     }
